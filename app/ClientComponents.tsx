@@ -10,15 +10,15 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 const chartConfig = {
   branca: {
     label: "População Branca",
-    color: "hsl(15, 77%, 31%)", // Terracotta ODS 18
+    color: "hsl(15, 40%, 70%)", // Antiga Parda
   },
   preta: {
     label: "População Preta",
-    color: "hsl(15, 50%, 50%)", 
+    color: "hsl(15, 77%, 31%)", // Antiga Branca
   },
   parda: {
     label: "População Parda",
-    color: "hsl(15, 40%, 70%)",
+    color: "hsl(15, 50%, 50%)", // Antiga Preta
   },
 } satisfies ChartConfig;
 
@@ -52,8 +52,8 @@ export default function ClientComponents({ type, data, geoUrl }: { type: "chart"
             <ChartTooltip content={<ChartTooltipContent />} />
             <Legend verticalAlign="top" height={36} />
             <Bar dataKey="branca" fill="var(--color-branca)" radius={[6, 6, 0, 0]} barSize={24} />
-            <Bar dataKey="preta" fill="var(--color-preta)" radius={[6, 6, 0, 0]} barSize={24} />
             <Bar dataKey="parda" fill="var(--color-parda)" radius={[6, 6, 0, 0]} barSize={24} />
+            <Bar dataKey="preta" fill="var(--color-preta)" radius={[6, 6, 0, 0]} barSize={24} />
           </BarChart>
         </ChartContainer>
       </motion.div>
@@ -72,10 +72,10 @@ export default function ClientComponents({ type, data, geoUrl }: { type: "chart"
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
-        className="w-full max-w-4xl border rounded-xl bg-card p-6 shadow-sm overflow-hidden"
+        className="w-full overflow-hidden mt-4"
       >
-        <div className="relative aspect-video w-full flex items-center justify-center bg-muted/20 rounded-lg">
-          <ComposableMap projection="geoMercator" projectionConfig={{ scale: 500, center: [-55, -15] }} className="w-full h-full">
+        <div className="relative aspect-video w-full flex items-center justify-center bg-muted/20 rounded-xl border border-border/50 shadow-sm">
+          <ComposableMap projection="geoMercator" projectionConfig={{ scale: 700, center: [-55, -15] }} className="w-full h-full">
             <Geographies geography={geoUrl}>
               {({ geographies }) =>
                 geographies.map((geo) => {

@@ -54,7 +54,7 @@ export default async function DashboardPage() {
           <section id="chart" className="scroll-mt-20">
              <Card className="border-none shadow-none bg-transparent">
               <CardHeader className="px-6">
-                <CardTitle className="text-2xl font-bold">Distribuição de Rendimento</CardTitle>
+                <CardTitle className="text-2xl font-bold">Distribuição de Renda</CardTitle>
                 <CardDescription>Comparativo por cor/raça nas Unidades da Federação selecionadas.</CardDescription>
               </CardHeader>
               <CardContent className="px-6">

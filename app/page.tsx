@@ -29,12 +29,6 @@ export default async function DashboardPage() {
       <header className="mb-12">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
-            <h1 className="text-4xl font-black tracking-tight lg:text-5xl text-primary mb-2">
-              ODS 18
-            </h1>
-            <p className="text-2xl font-semibold tracking-tight text-foreground/80">
-              Igualdade Étnico-Racial
-            </p>
             <p className="text-muted-foreground font-medium max-w-2xl leading-relaxed">
               Eliminar o racismo e a discriminação étnico-racial, em todas suas formas, contra os povos indígenas e afrodescendentes.
             </p>

@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ODS 18 Brasil - Dashboard de Paridade Étnico-Racial
 
-## Getting Started
+![ODS 18](https://img.shields.io/badge/ODS-18-007bff?style=for-the-badge)
+![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-First, run the development server:
+Este projeto é um dashboard analítico focado no **ODS 18 (Igualdade Racial)**, especificamente nos indicadores de paridade de rendimento no Brasil. Desenvolvido para apoiar a visualização de dados do **Censo Demográfico 2022 (IBGE)**, o dashboard oferece uma visão imersiva das desigualdades étnico-raciais e de gênero através de mapas dinâmicos e gráficos avançados.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Tecnologias
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Linguagem**: [TypeScript](https://www.typescriptlang.org/)
+- **Estilização**: [Tailwind CSS](https://tailwindcss.com/)
+- **Visualização de Dados**: [Recharts](https://recharts.org/)
+- **Cartografia**: [React Simple Maps](https://www.react-simple-maps.io/)
+- **Animações**: [Framer Motion](https://www.framer.com/motion/)
+- **Ícones**: [Lucide React](https://lucide.dev/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📊 Fontes de Dados e Metodologia
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Os dados são consumidos em tempo real via **API SIDRA (IBGE)**:
+- **Tabela Principal**: 10281 (Censo Demográfico 2022)
+- **Variáveis**: 
+  - `13536`: Rendimento nominal médio mensal das pessoas de 14 anos ou mais de idade, ocupadas na semana de referência.
+  - `13535`: Pessoas de 14 anos ou mais de idade, ocupadas na semana de referência.
+- **Cálculo de Paridade**: O dashboard utiliza a **Média Ponderada Populacional** para calcular a paridade nacional e regional, garantindo rigor estatístico ao ponderar o rendimento pelo tamanho da população ocupada de cada Unidade da Federação.
 
-## Learn More
+## 🛠️ Configuração Local
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/LucasJRDS/ods18.git
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
 
-## Deploy on Vercel
+## 📄 Licença
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto foi desenvolvido sob orientação técnica para fins de disseminação de indicadores ODS. Sinta-se à vontade para utilizar e contribuir seguindo as diretrizes de dados abertos.

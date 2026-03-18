@@ -35,7 +35,7 @@ export default function RootLayout({
           <TooltipProvider delay={0}>
             <SidebarProvider>
               <AppSidebar />
-              <SidebarInset>
+              <SidebarInset className="overflow-x-hidden">
                 <header className="flex h-16 shrink-0 items-center justify-between px-4 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 border-b border-border/50 sticky top-0 bg-background/80 backdrop-blur-md z-50">
                   <div className="flex items-center gap-2">
                     <SidebarTrigger className="-ml-1" />
@@ -44,9 +44,7 @@ export default function RootLayout({
                   </div>
                   <ThemeToggle />
                 </header>
-                <main className="flex-1 overflow-y-auto">
-                  {children}
-                </main>
+                {children}
               </SidebarInset>
             </SidebarProvider>
           </TooltipProvider>

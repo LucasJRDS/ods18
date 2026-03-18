@@ -7,7 +7,6 @@ import {
   Database, 
   FileText, 
   Search,
-  Settings,
   ShieldCheck,
   Building2,
   Users
@@ -53,11 +52,6 @@ const data = {
       title: "Metodologia",
       url: "#methodology",
       icon: FileText,
-    },
-    {
-      title: "Configurações",
-      url: "#",
-      icon: Settings,
     },
   ],
 }
